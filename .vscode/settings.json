@@ -1,0 +1,54 @@
+{
+    // ================= Terminal Appearance =================
+    "terminal.integrated.fontFamily": "Fira Code, Cascadia Code, JetBrains Mono, monospace",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontWeightBold": "bold",
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.minimumContrastRatio": 1,
+
+    // ================= Color Theme =================
+    "workbench.colorTheme": "One Dark Pro",  // choose your favorite theme
+    "workbench.colorCustomizations": {
+        "terminal.background": "#1e1e2e",
+        "terminal.foreground": "#c5c8c6",
+        "terminalCursor.background": "#c5c8c6",
+        "terminalCursor.foreground": "#c5c8c6",
+        "terminal.ansiBlack": "#1c1c1c",
+        "terminal.ansiRed": "#f44747",
+        "terminal.ansiGreen": "#6a9955",
+        "terminal.ansiYellow": "#dcdcaa",
+        "terminal.ansiBlue": "#569cd6",
+        "terminal.ansiMagenta": "#c586c0",
+        "terminal.ansiCyan": "#4ec9b0",
+        "terminal.ansiWhite": "#d4d4d4",
+        "terminal.ansiBrightBlack": "#808080",
+        "terminal.ansiBrightRed": "#f44747",
+        "terminal.ansiBrightGreen": "#b5cea8",
+        "terminal.ansiBrightYellow": "#f9f1a5",
+        "terminal.ansiBrightBlue": "#9cdcfe",
+        "terminal.ansiBrightMagenta": "#d7afff",
+        "terminal.ansiBrightCyan": "#4ec9b0",
+        "terminal.ansiBrightWhite": "#ffffff"
+    },
+
+    // ================= Optional: Transparency =================
+    //"terminal.background": "#1e1e2eAA",  // uncomment for slight transparency
+
+    // ================= Shell Settings =================
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+        },
+        "WSL": {
+            "path": "C:\\Windows\\System32\\wsl.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash"  // or WSL/PowerShell
+}
