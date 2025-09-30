@@ -6,6 +6,9 @@ export default function Input() {
   const [title, setTitle] = useState("");
   const [releaseYear, setReleaseYear] = useState();
   const [error, setError] = useState(null);
+  cons [updateBookname, setUpdateBookname] = useState("");
+
+
 
   useEffect(() => {
     fetchBooks();
@@ -44,6 +47,68 @@ export default function Input() {
       setError("Could not add book.");
     }
   };
+
+
+
+
+
+
+  const updateBook = async (id) => {
+
+  try{
+  const bookData = {
+    title : updateBookname,
+    release_year
+  }
+
+  const response = await fetch(`http://127.0.0.1:8000/api/books/create/${id}/`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(bookData),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update book"); 
+  } else {
+    const data = await response.json();
+    setBooks((prev) =>
+      prev.map(book => book.id === id ? data : book)
+    );
+    
+  }
+
+    
+  
+  
+  }catch(err){  
+    console.error("Error updating book:", err);
+    setError("Could not update book.");
+  }
+
+ };
+ 
+ const deteteBook = async (id) => {
+  try {
+     const response = await fetch(`http://127.0.0.1:8000/api/books/create/${id}/`, {
+    method: "DELETE",
+
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to delete book");
+  } else {
+    setBooks(
+    (prev) => prev.filter(book => book.id  !== id)
+    );
+  }
+
+}catch(err){
+    console.error("Error deleting book:", err);
+    setError("Could not delete book.");
+  }
+};
+
+
 
   return (
     <div className={styles.container}>
