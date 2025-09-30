@@ -45,6 +45,7 @@ jobs:
           python manage.py migrate
           python manage.py test
 
+
   frontend-build:
     runs-on: ubuntu-latest
     steps:
